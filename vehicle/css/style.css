@@ -1,5 +1,10 @@
+#navlist { text-align: center; }
+
 #navlist ul{
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 16px;
 }
 #navlist ul li {
@@ -8,9 +13,20 @@
   padding-right: 12px;
 }
 
+.title {
+  font-size: 14px;
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+#abstract p {
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 16px;
+  line-height: 24px;
 }
