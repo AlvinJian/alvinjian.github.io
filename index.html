@@ -1,1 +1,40 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navlist">
+      <ul>
+        <li>[abstract]</li>
+        <li>software and hardware</li>
+      </ul>
+    </div>
+    <h1>Abstract</h1>
+    <p>The main purpose of this paper is to integrate GPS recievers, electronical
+compass, stereo camera, ultrasonic sensors, and dynamic system, developing a
+PC-based unmanned vehicle system for outdoor navigation. The main system
+comprises three parts: main station, reference station, and the vehicle. GPS signals
+received by reference station and vehicle are utilized to determine the position of the
+vehicle by Carrier Smoothed Code method. Electronical compass senses the heading
+angle of vehicle. Stereo camera and ultrasonic sensors are employed to detect
+obstalces, and obstalce-avoiding action is taken if obstacles exist. Main station
+monitors the motion of the vehicle, and the information is exchanged via wireless
+network.</p>
+
+<p>SRI Stereo Engine(API) and the concept of "grids" are utilized to determine the
+relative distance between the vehicle and obstalces. Once the positions of obstacles
+are known, a path along which the vehicle can avoid those obstacles is decided by
+Rapidly-Exploring Random Tree method. Six ultrasonic sensors are assembled and
+controlled through FPGA board, and a rule-based system is utilized to deal with the
+data collected by ultasonic sensor system, determining the corresponding linear
+velocity and angular velocity output in order to avoid nearby obstacles.
+An operation flow is developed to integrate these obstacle avoidance modes,
+making the vehicle choose the proper mode. Besides, the vehicle is able to switch
+from one mode to another correctly. Experimental results described in this thesis
+proves that the proposed navigation and control methodolgy are feasible.
+Keywords: Rapidly-Exploring Random Tree, Obstacle Avoidance for Navigation
+System.</p>
+  </body>
+</html>
