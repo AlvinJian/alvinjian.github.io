@@ -4,14 +4,14 @@
     <title>Contribution</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
-	  #imagesMain {
+	    .cntrimg {
         padding: 0;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
         text-align: center;
       }
-      #imagesMain img {
+      img.cntrimg {
         width: 400px;
         height: 300px;
         vertical-align: middle;
@@ -33,10 +33,11 @@
 	<ol>
 	  <li><a href="#img_algo_sec">Design a specialized auto-exposure method</a></li>
 	</ol>
-    <div id="imagesMain">
-      <img src="img/before.jpeg">
-      <img src="img/after.jpeg">
-      <p> test </p>
-    </div>
+    <p class="cntrimg">
+      <img class="cntrimg" src="img/before.jpeg">
+      <img class="cntrimg" src="img/after.jpeg">
+    </p>
+    <p>The left image was captured with built-in auto-exposure method;
+    The right image was captured with my algorithm</p>
   </body>
 </html>
