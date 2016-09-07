@@ -8,13 +8,14 @@
         padding: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20px;
         text-align: center;
       }
       img.cntrimg {
-        width: 400px;
-        height: 300px;
         vertical-align: middle;
+      }
+
+      #list {
+        line-height: 150%
       }
     </style>
   </head>
@@ -29,15 +30,49 @@
       </ul>
     </div>
 
-    <h2 align="center">My Contributions</h2>
+    <h2 id="top" align="center">My Contributions</h2>
+  <div id="list">
 	<ol>
-	  <li><a href="#img_algo_sec">Design a specialized auto-exposure method</a></li>
+    <li><a href="#rrt">Design a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
+	  <li><a href="#expo">Design a specialized auto-exposure method</a></li>
+    <li><a href="#sys">Integrate the path-planning system with ultrasonic system</a></li>
 	</ol>
+  </div>
+
+  <div id="rrt">
+    <h3>Path-planning System</h3>
+    <p>I developed the path-planning system based on Rapidly-Exploring Random Tree(RRT).
+      It takes information of the obstacles detected by stereo camera, creating a path to avoid the obstacles.</p>
+    <p>Here is an example of my RRT implementation:</p>
     <p class="cntrimg">
-      <img class="cntrimg" src="img/before.jpeg">
-      <img class="cntrimg" src="img/after.jpeg">
+      <img class="cntrimg" src="img/rrt1.jpg" width="320px" height="320px">
+      <img class="cntrimg" src="img/rrt2.jpg" width="320px" height="320px">
+    </p>
+    <p class="cntrimg">
+      <img class="cntrimg" src="img/rrt3.jpg" width="320px" height="320px">
+      <img class="cntrimg" src="img/rrt4.jpg" width="320px" height="320px">
+    </p>
+    <p><a href="#top">^TOP</a></p>
+  </div>
+
+  <div id="expo">
+    <h3>Auto-exposure Method</h3>
+    <p class="cntrimg">
+      <img class="cntrimg" src="img/before.jpeg" width="400px" height="300px">
+      <img class="cntrimg" src="img/after.jpeg" width="400px" height="300px">
     </p>
     <p>The left image was captured with built-in auto-exposure method;
     The right image was captured with my algorithm</p>
+    <p><a href="#top">^TOP</a></p>
+  </div>
+
+  <div id="sys">
+  <h3>Integration of path-planning and ultrasonic systems</h3>
+    <p class="cntrimg">
+      <img class="cntrimg" src="img/sys_flow.png" width="854px" height="auto">
+    </p>
+    <p><a href="#top">^TOP</a></p>
+  </div>
+
   </body>
 </html>
