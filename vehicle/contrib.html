@@ -4,17 +4,19 @@
     <title>Contribution</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
-	    .cntrimg {
-        padding: 0;
+	  .cntr {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
       }
-
       #list {
         line-height: 150%
       }
-    </style>
+      table {
+		margin: 0px auto;
+		border-spacing: 4px;
+	  }
+	</style>
   </head>
   <body>
     <h1 class="title">Obstacle Avoidance System Design and Path Planning for An Unmanned Vehicle</h1>
@@ -41,31 +43,51 @@
     <p>I developed the path-planning system based on Rapidly-Exploring Random Tree(RRT).
       It takes information of the obstacles detected by stereo camera, creating a path to avoid the obstacles.</p>
     <p>Here is an example of my RRT implementation:</p>
-    <div class="cntrimg">
-      <img src="img/rrt1.jpg" width="320px" height="320px"/>
-      <img src="img/rrt2.jpg" width="320px" height="320px"/>
-    </div>
-    <div class="cntrimg">
-      <img src="img/rrt3.jpg" width="320px" height="320px"/>
-      <img src="img/rrt4.jpg" width="320px" height="320px"/>
-    </div>
+    <table>
+      <tr class="cntr">
+        <td><img src="img/rrt1.jpg" width="320px" height="320px"/></td>
+        <td><img src="img/rrt2.jpg" width="320px" height="320px"/></td>
+      </tr>
+      <tr class="cntr">
+		<td>step 0: tree reaches goal</td>
+		<td>step 1: intial path</td>
+      </tr>
+      <tr>
+		<td>&nbsp</td>
+		<td>&nbsp</td>
+      </tr>
+      <tr class="cntr">
+        <td><img src="img/rrt3.jpg" width="320px" height="320px"/></td>
+        <td><img src="img/rrt4.jpg" width="320px" height="320px"/></td>
+      </td>
+      <tr class="cntr">
+		<td>step 2: shorten path</td>
+		<td>step 3: trim points</td>
+      </tr>
+    </table>
     <p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="expo">
     <h3>Auto-exposure Method</h3>
-    <div class="cntrimg">
-      <img src="img/before.jpeg" width="320px" height="240px"/>
-      <img src="img/after.jpeg" width="320px" height="240px"/>
-    </div>
-    <p>The left image was captured with built-in auto-exposure method;
-    The right image was captured with my algorithm</p>
+
+    <table border="0">
+	  <tr class="cntr">
+		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
+          <td><img src="img/after.jpeg" width="320px" height="240px"/></td>
+	  </tr>
+	  <tr class="cntr">
+		  <td>Built-in auto-exposure method</td>
+		  <td>My algorithm</td>
+	  </tr>
+	</table>
+
     <p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="sys">
   <h3>Integration of path-planning and ultrasonic systems</h3>
-    <div class="cntrimg">
+    <div class="cntr">
       <img src="img/sys_flow.png" width="854px" height="auto"/>
     </div>
     <p><a href="#top">^TOP</a></p>
