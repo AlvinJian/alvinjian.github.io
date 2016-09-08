@@ -9,12 +9,21 @@
         margin-right: auto;
         text-align: center;
       }
+      .imgdesc {
+		  font-size: 14px;
+	  }
       #list {
-        line-height: 150%
+        line-height: 150%;
+        padding-left: 30px;
+		padding-right: 30px;
       }
       table {
 		margin: 0px auto;
 		border-spacing: 4px;
+	  }
+	  p {
+		padding-left: 50px;
+		padding-right: 50px;
 	  }
 	</style>
   </head>
@@ -33,7 +42,8 @@
   <div id="list">
 	<ol>
     <li><a href="#rrt">Design a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
-	  <li><a href="#expo">Design a specialized auto-exposure method</a></li>
+	<li><a href="#expo">Design a specialized auto-exposure method</a></li>
+	<!--li><a href="#model"></a></li -->
     <li><a href="#sys">Integrate the path-planning system with ultrasonic system</a></li>
 	</ol>
   </div>
@@ -62,27 +72,32 @@
       </td>
       <tr class="cntr">
 		<td>step 2: shorten path</td>
-		<td>step 3: trim points</td>
+		<td>step 3: trim unnecessary points</td>
       </tr>
     </table>
-    <p><a href="#top">^TOP</a></p>
+    <!--p>The above images are created by a Qt/C++ program.</p -->
+    <a href="#top">^TOP</a>
   </div>
 
   <div id="expo">
     <h3>Auto-exposure Method</h3>
-
+    <p>Since the vehicle walks on the ground, the lower part of stereo camera
+     should be ground where the exposure value is close to the obstacle. 
+     Therefore, the specialized auto-exposure method I developed has following
+     characteristics:</p>
     <table border="0">
 	  <tr class="cntr">
 		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
           <td><img src="img/after.jpeg" width="320px" height="240px"/></td>
 	  </tr>
 	  <tr class="cntr">
-		  <td>Built-in auto-exposure method</td>
-		  <td>My algorithm</td>
+		  <td><span class="imgdesc">Built-in auto-exposure method</span></td>
+		  <td><span class="imgdesc">Specialized auto-exposure method</span></td>
 	  </tr>
 	</table>
-
-    <p><a href="#top">^TOP</a></p>
+	<p>With the specialized auto-exposure method, the images captured by stereo camera
+	are clearer. Consequently, the result of obstacle detection is improved.</p>
+    <a href="#top">^TOP</a>
   </div>
 
   <div id="sys">
@@ -90,7 +105,7 @@
     <div class="cntr">
       <img src="img/sys_flow.png" width="854px" height="auto"/>
     </div>
-    <p><a href="#top">^TOP</a></p>
+    <a href="#top">^TOP</a>
   </div>
 
   </body>
