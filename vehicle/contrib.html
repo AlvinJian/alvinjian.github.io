@@ -4,31 +4,33 @@
     <title>Contribution</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
-	  .cntr {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
       .imgdesc {
-		  font-size: 14px;
-	  }
+		    font-size: 14px;
+	    }
       #list {
         line-height: 150%;
-        padding-left: 30px;
-		padding-right: 30px;
+        padding-left: 60px;
+		    padding-right: 60px;
       }
       table {
-		margin: 0px auto;
-		border-spacing: 4px;
-	  }
-	  p {
-		padding-left: 50px;
-		padding-right: 50px;
-	  }
+		    margin: 0px auto;
+		    border-spacing: 4px;
+	    }
+	    p {
+		    padding-left: 80px;
+		    padding-right: 80px;
+	    }
+      .steps {
+        font-size: 14px;
+        line-height: 150%;
+        padding-left: 120px;
+        padding-right: 120px;
+      }
 	</style>
   </head>
   <body>
     <h1 class="title">Obstacle Avoidance System Design and Path Planning for An Unmanned Vehicle</h1>
+    <h5 class="author">By Maoyu Chien</h5>
     <div id="navlist">
       <ul>
         <li><a href="index.html">Abstract</a></li>
@@ -37,21 +39,25 @@
         <li><a href="rslt.html">Results</a></li>
       </ul>
     </div>
-
+    <hr />
     <h2 id="top" align="center">My Contributions</h2>
+    <!--p>My work was based on achievement of previous members of the lab I joined.
+    My contributions to this project were:</p -->
+
   <div id="list">
 	<ol>
-    <li><a href="#rrt">Design a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
-	<li><a href="#expo">Design a specialized auto-exposure method</a></li>
+    <li><a href="#rrt">Designed a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
+	<li><a href="#expo">Designed a specialized auto-exposure method</a></li>
 	<!--li><a href="#model"></a></li -->
-    <li><a href="#sys">Integrate the path-planning system with ultrasonic system</a></li>
+    <li><a href="#sys">Integrated the path-planning system with ultrasonic system</a></li>
 	</ol>
   </div>
 
   <div id="rrt">
-    <h3>Path-planning System</h3>
+    <h3 class="cntr">Path-planning System</h3>
     <p>I developed the path-planning system based on Rapidly-Exploring Random Tree(RRT).
-      It takes information of the obstacles detected by stereo camera, creating a path to avoid the obstacles.</p>
+      The path-planning system takes the coordinates of the obstacles detected by stereo camera,
+      creating a path to avoid the obstacles.</p>
     <p>Here is an example of my RRT implementation:</p>
     <table>
       <tr class="cntr">
@@ -59,8 +65,8 @@
         <td><img src="img/rrt2.jpg" width="320px" height="320px"/></td>
       </tr>
       <tr class="cntr">
-		<td>step 0: tree reaches goal</td>
-		<td>step 1: intial path</td>
+		<td><span class="imgdesc">step 0: tree reaches goal</span></td>
+		<td><span class="imgdesc">step 1: intial path</span></td>
       </tr>
       <tr>
 		<td>&nbsp</td>
@@ -71,20 +77,27 @@
         <td><img src="img/rrt4.jpg" width="320px" height="320px"/></td>
       </td>
       <tr class="cntr">
-		<td>step 2: shorten path</td>
-		<td>step 3: trim unnecessary points</td>
+		<td><span class="imgdesc">step 2: shorten path</span></td>
+		<td><span class="imgdesc">step 3: trim unnecessary points</span></td>
       </tr>
     </table>
     <!--p>The above images are created by a Qt/C++ program.</p -->
-    <a href="#top">^TOP</a>
+    <p>The path-planning system only discovers the area around the vehicle, and
+    the area changes according to the position of the vehicle.</p>
+    <p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="expo">
-    <h3>Auto-exposure Method</h3>
+    <h3 class="cntr">Auto-exposure Method</h3>
     <p>Since the vehicle walks on the ground, the lower part of stereo camera
-     should be ground where the exposure value is close to the obstacle. 
-     Therefore, the specialized auto-exposure method I developed has following
-     characteristics:</p>
+     should be ground where the exposure value is close to the obstacle.
+     The specialized auto-exposure method can ba expressed as following steps:</p>
+     <ol class="steps">
+       <li>Weighted Average Brightness=(Average greyscale of the lower 1/3 part of the image) * 0.7 +
+            Averge greyscale of other part * 0.3</li>
+       <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
+            can fall between 96~160(8-bit greyscale).</li>
+     </ol>
     <table border="0">
 	  <tr class="cntr">
 		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
@@ -96,16 +109,16 @@
 	  </tr>
 	</table>
 	<p>With the specialized auto-exposure method, the images captured by stereo camera
-	are clearer. Consequently, the result of obstacle detection is improved.</p>
-    <a href="#top">^TOP</a>
+	are more clear. Consequently, the result of obstacle detection is improved.</p>
+    <p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="sys">
-  <h3>Integration of path-planning and ultrasonic systems</h3>
+  <h3 class="cntr">Integration of path-planning and ultrasonic systems</h3>
     <div class="cntr">
       <img src="img/sys_flow.png" width="854px" height="auto"/>
     </div>
-    <a href="#top">^TOP</a>
+    <p><a href="#top">^TOP</a></p>
   </div>
 
   </body>
