@@ -8,23 +8,23 @@
 		    font-size: 14px;
 	    }
       #list {
-        line-height: 150%;
-        padding-left: 100px;
-		    padding-right: 100px;
+        line-height: 175%;
+        width: 85%;
+		    margin: auto;
       }
       table {
 		    margin: 0px auto;
 		    border-spacing: 4px;
 	    }
 	    p {
-		    padding-left: 110px;
-		    padding-right: 110px;
+        width: 80%;
+        margin: auto;
 	    }
       .steps {
         font-size: 14px;
-        line-height: 150%;
-        padding-left: 130px;
-        padding-right: 130px;
+        line-height: 175%;
+        margin: auto;
+        width: 75%;
       }
 	</style>
   </head>
@@ -57,8 +57,8 @@
     <h3 class="cntr">Path-planning System</h3>
     <p>I developed the path-planning system based on Rapidly-Exploring Random Tree(RRT).
       The path-planning system takes the coordinates of the obstacles detected by stereo camera,
-      creating a path to avoid the obstacles.</p>
-    <p>Here is an example of my RRT implementation:</p>
+      creating a path to avoid the obstacles.</p><br/>
+    <p>Here is an example of my RRT implementation:</p><br/>
     <table>
       <tr class="cntr">
         <td><img src="img/rrt1.jpg" width="320px" height="320px"/></td>
@@ -80,24 +80,24 @@
 		<td><span class="imgdesc">step 2: shorten path</span></td>
 		<td><span class="imgdesc">step 3: trim unnecessary points</span></td>
       </tr>
-    </table>
+    </table><br/>
     <!--p>The above images are created by a Qt/C++ program.</p -->
     <p>The path-planning system only discovers the area around the vehicle, and
     the area changes according to the position of the vehicle.</p>
-    <p><a href="#top">^TOP</a></p>
+    <br/><p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="expo">
     <h3 class="cntr">Auto-exposure Method</h3>
     <p>Since the vehicle walks on the ground, the lower part of stereo camera
      should be ground where the exposure value is close to the obstacle.
-     The specialized auto-exposure method can ba expressed as following steps:</p>
+     The specialized auto-exposure method can ba expressed as following steps:</p><br/>
      <ol class="steps">
        <li>Weighted Average Brightness=(Average greyscale of the lower 1/3 part of the image) * 0.7 +
             Averge greyscale of other part * 0.3</li>
        <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
             can fall between 96~160(8-bit greyscale).</li>
-     </ol>
+     </ol><br/>
     <table border="0">
 	  <tr class="cntr">
 		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
@@ -107,18 +107,18 @@
 		  <td><span class="imgdesc">Built-in auto-exposure method</span></td>
 		  <td><span class="imgdesc">Specialized auto-exposure method</span></td>
 	  </tr>
-	</table>
+	</table><br/>
 	<p>With the specialized auto-exposure method, the images captured by stereo camera
 	are more clear. Consequently, the result of obstacle detection is improved.</p>
-    <p><a href="#top">^TOP</a></p>
+    <br/><p><a href="#top">^TOP</a></p>
   </div>
 
   <div id="sys">
-  <h3 class="cntr">Integration of path-planning and ultrasonic systems</h3>
+  <h3 class="cntr">Integration of Path-planning And Ultrasonic Systems</h3>
     <div class="cntr">
       <img src="img/sys_flow.png" width="854px" height="auto"/>
     </div>
-    <p><a href="#top">^TOP</a></p>
+    <br/><p><a href="#top">^TOP</a></p>
   </div>
 
   </body>
