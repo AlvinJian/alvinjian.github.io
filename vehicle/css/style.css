@@ -42,3 +42,23 @@ body {
 p {
   line-height: 150%;
 }
+
+table {
+  margin: 0px auto;
+  border-spacing: 4px;
+}
+td {
+  width: 400px;
+  height: auto;
+}
+
+.imgdesc {
+  font-size: 14px;
+}
+
+.detail_list {
+  font-size: 14px;
+  line-height: 175%;
+  margin: auto;
+  width: 65%;
+}

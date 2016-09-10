@@ -4,28 +4,15 @@
     <title>Contribution</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
-      .imgdesc {
-		    font-size: 14px;
-	    }
-      #list {
+      #contrib_list {
         line-height: 175%;
-        width: 85%;
+        width: 75%;
 		    margin: auto;
       }
-      table {
-		    margin: 0px auto;
-		    border-spacing: 4px;
-	    }
 	    p {
-        width: 80%;
+        width: 70%;
         margin: auto;
 	    }
-      .steps {
-        font-size: 14px;
-        line-height: 175%;
-        margin: auto;
-        width: 75%;
-      }
 	</style>
   </head>
   <body>
@@ -40,11 +27,11 @@
       </ul>
     </div>
     <hr />
-    <h2 id="top" align="center">My Contributions</h2>
+    <h2 align="center">My Contributions</h2>
     <!--p>My work was based on achievement of previous members of the lab I joined.
     My contributions to this project were:</p -->
 
-  <div id="list">
+  <div id="contrib_list">
 	<ol>
     <li><a href="#rrt">Designed a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
 	<li><a href="#expo">Designed a specialized auto-exposure method</a></li>
@@ -55,7 +42,7 @@
 
   <div id="rrt">
     <h3 class="cntr">Path-planning System</h3>
-    <p>I developed the path-planning system based on Rapidly-Exploring Random Tree(RRT).
+    <p>I developed the path-planning system based on Rapidly-Exploring Random Tree (RRT).
       The path-planning system takes the coordinates of the obstacles detected by stereo camera,
       creating a path to avoid the obstacles.</p><br/>
     <p>Here is an example of my RRT implementation:</p><br/>
@@ -80,11 +67,12 @@
 		<td><span class="imgdesc">step 2: shorten path</span></td>
 		<td><span class="imgdesc">step 3: trim unnecessary points</span></td>
       </tr>
-    </table><br/>
-    <!--p>The above images are created by a Qt/C++ program.</p -->
-    <p>The path-planning system only discovers the area around the vehicle, and
+    </table>
+    <p class="imgdesc">The part of RRT and a simple GUI are on <a href="https://github.com/AlvinJian/RRT-Test">Github</a></p>
+    <br>
+    <p>The path-planning system only discovers the square area around the vehicle, and
     the area changes according to the position of the vehicle.</p>
-    <br/><p><a href="#top">^TOP</a></p>
+    <br/><p><a href="#navlist">^TOP</a></p>
   </div>
 
   <div id="expo">
@@ -92,7 +80,7 @@
     <p>Since the vehicle walks on the ground, the lower part of stereo camera
      should be ground where the exposure value is close to the obstacle.
      The specialized auto-exposure method can ba expressed as following steps:</p><br/>
-     <ol class="steps">
+     <ol class="detail_list">
        <li>Weighted Average Brightness=(Average greyscale of the lower 1/3 part of the image) * 0.7 +
             Averge greyscale of other part * 0.3</li>
        <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
@@ -110,15 +98,47 @@
 	</table><br/>
 	<p>With the specialized auto-exposure method, the images captured by stereo camera
 	are more clear. Consequently, the result of obstacle detection is improved.</p>
-    <br/><p><a href="#top">^TOP</a></p>
+    <br/><p><a href="#navlist">^TOP</a></p>
   </div>
 
   <div id="sys">
   <h3 class="cntr">Integration of Path-planning And Ultrasonic Systems</h3>
+  <p>I integrated the path-planning system with the ultrasonic sensor system,
+    which was employed as a real-time obstacle avoidance method. The characteristics of
+     these systems are:</p><br />
+     <p>RRT-based Path-planning System:</p>
+     <p><b>Pro:</b>
+       <ul class="detail_list">
+         <li>It took the obstacles detected by stereo camera, so the range of detection
+           was much larger than ultrasonic sensors</li>
+         <li>It can handle multiple obstacles in systematic way</li>
+       </ul>
+     </p>
+     <p><b>Con:</b>
+       <ul class="detail_list">
+         <li>It cost large amounts of computing resources</li>
+       </ul>
+     </p><br>
+     <p>Ultrasonic Sensor System:</p>
+     <p><b>Pro:</b>
+       <ul class="detail_list">
+         <li>It took the obstacles detected by ultrasonic sensors and utilized a simple rule-based
+           scheme to avoid obstacle, so it runs faster.</li>
+       </ul>
+     </p>
+     <p><b>Con:</b>
+       <ul class="detail_list">
+         <li>It can only avoid obstacles within 1 meter.</li>
+       </ul>
+     </p><br>
+     <p>I developed a decision flow to integrate these systems so that they complement
+       to each other:</p>
+    <br>
     <div class="cntr">
-      <img src="img/sys_flow.png" width="854px" height="auto"/>
-    </div>
-    <br/><p><a href="#top">^TOP</a></p>
+      <img src="img/decision.png" width="854px" height="auto"/>
+    </div><br>
+    <p>The results are in <a href="rslt.html">Results</a> page.</p>
+    <br/><p><a href="#navlist">^TOP</a></p>
   </div>
 
   </body>
