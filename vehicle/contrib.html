@@ -33,9 +33,9 @@
 
   <div id="contrib_list">
 	<ol>
-    <li><a href="#rrt">Designed a path-planning system based on Rapidly-Exploring Random Tree(RRT)</a></li>
-	<li><a href="#expo">Designed a specialized auto-exposure method</a></li>
-	<!--li><a href="#model"></a></li -->
+    <li><a href="#rrt">Developed a path-planning system based on Rapidly-Exploring Random Tree (RRT)</a></li>
+	<li><a href="#expo">Developed a specialized auto-exposure method for stereo camera</a></li>
+	<li><a href="#model">Developed a fast and safe method to modeling obstacles detected by stereo camera</a></li>
     <li><a href="#sys">Integrated the path-planning system with ultrasonic system</a></li>
 	</ol>
   </div>
@@ -68,7 +68,7 @@
 		<td><span class="imgdesc">step 3: trim unnecessary points</span></td>
       </tr>
     </table>
-    <p class="imgdesc">The part of RRT and a simple GUI are on <a href="https://github.com/AlvinJian/RRT-Test">Github</a></p>
+    <p class="imgdesc">The source code of RRT and a simple GUI are on <a href="https://github.com/AlvinJian/RRT-Test">Github</a></p>
     <br>
     <p>The path-planning system only discovers the square area around the vehicle, and
     the area changes according to the position of the vehicle.</p>
@@ -81,10 +81,10 @@
      should be ground where the exposure value is close to the obstacle.
      The specialized auto-exposure method can ba expressed as following steps:</p><br/>
      <ol class="detail_list">
-       <li>Weighted Average Brightness=(Average greyscale of the lower 1/3 part of the image) * 0.7 +
+       <li>Weighted Average Brightness = (Average greyscale of the lower 1/3 part of the image) * 0.7 +
             Averge greyscale of other part * 0.3</li>
        <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
-            can fall between 96~160(8-bit greyscale).</li>
+            falls between 96~160(8-bit greyscale).</li>
      </ol><br/>
     <table border="0">
 	  <tr class="cntr">
