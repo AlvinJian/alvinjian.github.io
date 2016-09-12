@@ -15,8 +15,8 @@
 }
 
 .title {
-  font-size: 14px;
-  padding: 4px;
+  font-size: 16px;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -27,8 +27,7 @@
 }
 
 .author {
-  padding: 2px;
-  margin: 0 auto;
+  margin: 3px auto;
   text-align: center;
 }
 
@@ -42,6 +41,7 @@ p {
 }
 
 table {
+  width: 80%;
   margin: 0px auto;
   border-spacing: 4px;
 }
