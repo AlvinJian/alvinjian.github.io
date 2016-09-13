@@ -4,10 +4,81 @@
     <title>Results</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
+      p {
+        width: 70%;
+        margin: auto;
+      }
 
+      td.fieldimg {
+        width: 400px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: bottom;
+      }
 	  </style>
   </head>
   <body>
+    <h1 class="title">Obstacle Avoidance System Design and Path Planning for An Unmanned Vehicle</h1>
+    <h6 class="author">Author: Maoyu Chien</h6>
+    <h6 class="author">Advisor: Li-Sheng Wang, Fan-Ren Chang</h6>
+    <div id="navlist">
+      <ul>
+        <li><a href="index.html">Abstract</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="contrib.html">Contributions</a></li>
+        <li><a href="rslt.html">[Results]</a></li>
+      </ul>
+    </div>
+    <hr />
 
+    <h3 class="cntr">Case 1: Only stereo camera and path-planning system worked</h3>
+    <table border="0">
+      <tr class="cntr">
+        <td class="fieldimg">
+          <img src="img/case1real.jpeg" width="400px" height="auto"/>
+        </td>
+        <td>
+          <img src="img/case1plot.png" width="400px" height="auto"/>
+        </td>
+      </tr>
+      <tr class="cntr">
+        <td><span class="imgdesc">Picture of Test Field</span></td>
+        <td><span class="imgdesc">Plot shown in main station program</span></td>
+      </tr>
+    </table>
+    <div class="detail_list">
+      <ul>
+        <li>The green blocks were the obstacles detected by stereo camera.</li>
+        <li>The red line was the path created by the path-planning system.</li>
+        <li>The black line was the actual path of the vehicle. </li>
+      </ul>
+    </div>
+
+    <h3 class="cntr">Case 2: Both path-planning system and ultrasonic system worked</h3>
+    <table border="0">
+      <tr class="cntr">
+        <td class="fieldimg">
+          <img src="img/case2real.jpeg" width="400px" height="auto"/>
+        </td>
+        <td>
+          <img src="img/case2plot.png" width="400px" height="auto"/>
+        </td>
+      </tr>
+      <tr class="cntr">
+        <td><span class="imgdesc">Picture of Test Field</span></td>
+        <td><span class="imgdesc">Plot shown in main station program</span></td>
+      </tr>
+    </table>
+    <div class="detail_list">
+      <ul>
+        <li>The green blocks were the obstacles detected by stereo camera.</li>
+        <li><b>The black block were the obstacles detected by ultrasonic sensors.</b>
+         They were manually drawn after the field test. <b>The unsmooth path segment indicated
+         that the vehicle was in real-time obstacle-avoidance mode.</b></li>
+        <li>The red line was the path created by the path-planning system.</li>
+        <li>The black line was the actual path of the vehicle. </li>
+      </ul>
+    </div>
   </body>
 </html>
