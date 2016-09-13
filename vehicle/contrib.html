@@ -35,9 +35,9 @@
   <div id="contrib_list">
 	<ol>
     <li><a href="#rrt">Developed a path-planning system based on Rapidly-Exploring Random Tree (RRT)</a></li>
-	<li><a href="#expo">Developed a specialized auto-exposure method for stereo camera</a></li>
-	<li><a href="#model">Developed a fast and safe method to modeling obstacles detected by stereo camera</a></li>
     <li><a href="#sys">Integrated the path-planning system with ultrasonic system</a></li>
+	  <li><a href="#expo">Developed a specialized auto-exposure method for stereo camera</a></li>
+	  <li><a href="#model">Developed a fast and safe method to modeling obstacles detected by stereo camera</a></li>
 	</ol>
   </div>
 
@@ -65,40 +65,14 @@
         <td><img src="img/rrt4.jpg" width="320px" height="320px"/></td>
       </td>
       <tr class="cntr">
-		<td><span class="imgdesc">step 2: shorten path</span></td>
-		<td><span class="imgdesc">step 3: trim unnecessary points</span></td>
+		    <td><span class="imgdesc">step 2: shorten path</span></td>
+		    <td><span class="imgdesc">step 3: trim unnecessary points</span></td>
       </tr>
     </table>
     <p class="imgdesc">The source code of RRT and a simple GUI are on <a href="https://github.com/AlvinJian/RRT-Test">Github</a></p>
     <br>
     <p>The path-planning system only discovers the square area around the vehicle, and
     the area changes according to the position of the vehicle.</p>
-    <br/><p><a href="#navlist">^TOP</a></p>
-  </div>
-
-  <div id="expo">
-    <h3 class="cntr">Auto-exposure Method</h3>
-    <p>Since the vehicle walks on the ground, the lower part of stereo camera
-     should be ground where the exposure value is close to the obstacle.
-     The specialized auto-exposure method can ba expressed as following steps:</p><br/>
-     <ol class="detail_list">
-       <li>Weighted Average Brightness = (Average greyscale of the lower 1/3 part of the image) * 0.7 +
-            Averge greyscale of other part * 0.3</li>
-       <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
-            falls between 96~160(8-bit greyscale).</li>
-     </ol><br/>
-    <table border="0">
-	  <tr class="cntr">
-		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
-          <td><img src="img/after.jpeg" width="320px" height="240px"/></td>
-	  </tr>
-	  <tr class="cntr">
-		  <td><span class="imgdesc">Built-in auto-exposure method</span></td>
-		  <td><span class="imgdesc">Specialized auto-exposure method</span></td>
-	  </tr>
-	</table><br/>
-	<p>With the specialized auto-exposure method, the images captured by stereo camera
-	are more clear. Consequently, the result of obstacle detection is improved.</p>
     <br/><p><a href="#navlist">^TOP</a></p>
   </div>
 
@@ -118,6 +92,7 @@
      <p><b>Con:</b>
        <ul class="detail_list">
          <li>It cost large amounts of computing resources</li>
+         <li>The generated path might differ largely from the previous path due to its intrinsic randomness</li>
        </ul>
      </p><br>
      <p>Ultrasonic Sensor System:</p>
@@ -140,6 +115,56 @@
     </div><br>
     <p>The results are in <a href="rslt.html">Results</a> page.</p>
     <br/><p><a href="#navlist">^TOP</a></p>
+  </div>
+
+  <div id="expo">
+    <h3 class="cntr">Auto-exposure Method</h3>
+    <p>Since the vehicle walks on the ground, the lower part of stereo camera
+     should be ground where the exposure value is close to the obstacle.
+     The specialized auto-exposure method can ba expressed as following steps:</p><br/>
+     <ol class="detail_list">
+       <li>Weighted Average Brightness = (Average greyscale of the lower 1/3 part of the image) * 0.7 +
+            Averge greyscale of other part * 0.3</li>
+       <li>Iterate changing the exposure setting of stereo camera so that this weighted average brightness
+            falls between 96~160(8-bit greyscale).</li>
+     </ol><br/>
+    <table border="0">
+	  <tr class="cntr">
+		  <td><img src="img/before.jpeg" width="320px" height="240px"/></td>
+      <td><img src="img/after.jpeg" width="320px" height="240px"/></td>
+	  </tr>
+	  <tr class="cntr">
+		  <td><span class="imgdesc">Built-in auto-exposure method</span></td>
+		  <td><span class="imgdesc">Specialized auto-exposure method</span></td>
+	  </tr>
+	</table><br/>
+	<p>With the specialized auto-exposure method, the images captured by stereo camera
+	are more clear. Consequently, the result of obstacle detection is improved.</p>
+    <br/><p><a href="#navlist">^TOP</a></p>
+  </div>
+
+  <div id="model">
+    <h3 class="cntr">Safe and quick way to modeling obstacle</h3>
+    <p>SRI Stereo Engine was provided by the vendor of our stereo camera. I used its
+      APIs to calculate and retrieve the position of each pixel</p>
+    <table border="0">
+      <tr class="cntr">
+        <td>
+          <img src="img/leftimg.jpeg" width="320px" height="240px" />
+        </td>
+        <td>
+          <img src="img/disparity.jpeg" width="320px" height="240px" />
+        </td>
+      </tr>
+      <tr class="cntr">
+        <td>
+          <span class="imgdesc">Left Eye Image</span>
+        </td>
+        <td>
+          <span class="imgdesc">Disparity Map by SRI Stereo Engine</span>
+        </td>
+      </tr>
+    </table>
   </div>
 
   </body>
