@@ -39,10 +39,12 @@ body {
 }
 
 p {
+  max-width: 854px;
   line-height: 150%;
 }
 
 table {
+  max-width: 960px;
   width: 80%;
   margin: 0px auto;
   border-spacing: 4px;
@@ -58,6 +60,7 @@ td {
 }
 
 .detail_list {
+  max-width: 720px;
   font-size: 14px;
   line-height: 175%;
   margin: auto;
