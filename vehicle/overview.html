@@ -4,15 +4,20 @@
     <title>Overview</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
-      .image {
-        float: left;
-        padding-left: 40px;
-        padding-right: 10px;
-        margin-right: 20px;
+      td.image {
+        margin: 0 auto;
       }
-      #desc {
+      td.desc {
+        width: 98%;
+        margin: 0 auto;
         line-height: 150%;
-        width: 95%;
+        text-align: left;
+        vertical-align: top;
+      }
+      table.twocol {
+        border-width: thin;
+        width: 90%;
+        margin: auto;
       }
     </style>
   </head>
@@ -30,16 +35,28 @@
     </div>
     <hr />
     <h2 align="center">Overview of hardware and software systems</h2>
-    <img class="image" src="img/all.jpg" width="400" height="300"/>
 
-    <div id="desc">
-      <!-- h3 align="left">Hardware</h3 -->
-      <ol>
-        <li>A compass, a GPS receiver, a stereo camera and ultrasonic sensors
-          were connected to the PC-based vehicle.
-        </li>
-      </ol>
+    <table class="twocol" border="0">
+      <tr>
+        <td class="image">
+          <img src="img/all.jpg" width="400" height="auto"/>
+        </td>
+        <td class="desc">
+          <ul>
+            <li>A compass, a GPS receiver, a stereo camera and ultrasonic sensors
+              were connected to the PC-based vehicle.
+            </li>
+            <li>A GPS receiver was connected to a laptop.</li>
+            <li>The laptop executed two programs: main station and reference station.</li>
+            <li>The purposes of main station program were path planning for the vehicle
+              and monitoring the vehicle.</li>
+            <li>The purpose of reference station program was sending its GPS raw data to the vehicle,
+              and the vehicle used these data and vehicle's own GPS raw data to calculate
+              the position.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
 
-    </div>
   </body>
 </html>
