@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px auto;
   text-align: center;
 }
@@ -29,6 +29,8 @@
 .author {
   margin: 3px auto;
   text-align: center;
+  font-size: 13px;
+  line-height: 110%;
 }
 
 body {
