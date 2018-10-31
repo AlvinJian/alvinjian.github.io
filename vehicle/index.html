@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <title>Abstract</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+      p {
+        margin: auto;
+        width: 65%;
+      }
+    </style>
+  </head>
+  <body id="ABSTRACT">
+    <h1 class="title">Obstacle Avoidance System Design and Path Planning for An Unmanned Vehicle</h1>
+    <h6 class="author">Author: Maoyu Chien</h6>
+    <h6 class="author">Email: <a href="mailto:alvinchien0624@gmail.com">alvinchien0624@gmail.com</a></h6>
+    <h6 class="author">Advisor: Prof. Li-Sheng Wang, Prof. Fan-Ren Chang</h6>
+    <div id="navlist">
+      <script src="scripts/tablist.js"></script>
+      <script>
+        createTabList();
+      </script>
+    </div>
+    <hr />
+    <h3 class="cntr">Abstract</h3>
+    <div id="abstract">
+    <p>The main purpose of this thesis is to integrate GPS recievers, electronical
+compass, stereo camera, ultrasonic sensors, and dynamic system, developing a
+PC-based unmanned vehicle system for outdoor navigation. The main system
+comprises three parts: main station, reference station, and the vehicle. GPS signals
+received by reference station and vehicle are utilized to determine the position of the
+vehicle by Carrier Smoothed Code method. Electronical compass senses the heading
+angle of vehicle. Stereo camera and ultrasonic sensors are employed to detect
+obstalces, and obstalce-avoiding action is taken if obstacles exist. Main station
+monitors the motion of the vehicle, and the information is exchanged via wireless
+network.</p><br />
+
+<p>SRI Stereo Engine(a library accompanied with the stereo camera) and the
+  concept of "grids" are utilized to determine the
+relative distance between the vehicle and obstalces. Once the positions of obstacles
+are known, a path along which the vehicle can avoid those obstacles is decided by
+Rapidly-Exploring Random Tree method. Six ultrasonic sensors are assembled and
+controlled through FPGA board, and a rule-based system is utilized to deal with the
+data collected by ultasonic sensor system, determining the corresponding linear
+velocity and angular velocity output in order to avoid nearby obstacles.
+An operation flow is developed to integrate these obstacle avoidance modes,
+making the vehicle choose the proper mode. Besides, the vehicle is able to switch
+from one mode to another correctly. Experimental results described in this thesis
+proves that the proposed navigation and control methodolgy are feasible.
+<br><br>
+Keywords: Rapidly-Exploring Random Tree, Obstacle Avoidance for Navigation
+System.</p><br/>
+  </div>
+
+  <h3 class="cntr">Picture of Equipment</h3>
+  <p>
+    All Equipment is shown below:
+  </p><br>
+  <div class="cntr">
+    <img src="img/all-big.jpg" width="640px" height="auto" />
+  </div><br>
+
+  <p>
+    Main and reference systems were actually two individual programs running
+    on a laptop.
+  </p>
+
+  <br><p><a href="#navlist">^TOP</a></p><br>
+  </body>
+</html>
