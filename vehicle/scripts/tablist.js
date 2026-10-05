@@ -1,4 +1,4 @@
-function createTabList() {
+(function () {
 	var curBodyId = document.body.id;
   console.log(curBodyId);
 	var tabUl = document.createElement("UL");
@@ -44,4 +44,4 @@ function createTabList() {
   tabUl.appendChild(rsltItem);
   var tabArea = document.getElementById("navlist");
   tabArea.appendChild(tabUl);
-}
+})()
